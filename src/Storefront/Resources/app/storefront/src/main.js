@@ -2,6 +2,8 @@
  * @package storefront
  */
 
+import './cms-v2';
+
 /*
 import polyfills
  */

@@ -3,7 +3,10 @@
     {# ludtwig-ignore twig-hash-key-no-quotes #}
     {% set layout = section.sizingMode ? section.sizingMode|replace({'_': '-'}) : 'container' %}
 
-    <div class="cms-section-sidebar {{ sectionMobileBehaviorClass }} {{ layout }} row">
+    <div
+        class="cms-section-sidebar {{ sectionMobileBehaviorClass }} {{ layout }} row"
+        data-cms-section-id="{{ section.id }}"
+    >
 
         {% set sidebarBlocks = section.blocks.filterBySectionPosition('sidebar') %}
         {% set mainContentBlocks = section.blocks.filterBySectionPosition('main') %}
